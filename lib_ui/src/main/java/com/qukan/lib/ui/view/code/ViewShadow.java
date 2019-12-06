@@ -39,33 +39,33 @@ public class ViewShadow {
             return;
         }
         if(canvas != null && rectF != null && path != null){
-            if(shadowOrientation == ViewOrientation.ALL){
+            if(shadowOrientation == ViewOrientation.SHADOW_ALL){
                 shadowPaint.setMaskFilter(new BlurMaskFilter(shadowWidth, BlurMaskFilter.Blur.OUTER));
             }else{
                 float shadow = shadowWidth/2;
                 switch (shadowOrientation){
-                    case ViewOrientation.LEFT:
+                    case ViewOrientation.SHADOW_LEFT:
                         shadowPaint.setShadowLayer(shadow, -shadow, 0, shadowColor);
                         break;
-                    case ViewOrientation.TOP:
+                    case ViewOrientation.SHADOW_TOP:
                         shadowPaint.setShadowLayer(shadow, 0, -shadow, shadowColor);
                         break;
-                    case ViewOrientation.RIGHT:
+                    case ViewOrientation.SHADOW_RIGHT:
                         shadowPaint.setShadowLayer(shadow, shadow, 0, shadowColor);
                         break;
-                    case ViewOrientation.BOTTOM:
+                    case ViewOrientation.SHADOW_BOTTOM:
                         shadowPaint.setShadowLayer(shadow, 0, shadow, shadowColor);
                         break;
-                    case ViewOrientation.LEFT_TOP:
+                    case ViewOrientation.SHADOW_LEFT_TOP:
                         shadowPaint.setShadowLayer(shadow, -shadow, -shadow, shadowColor);
                         break;
-                    case ViewOrientation.LEFT_BOTTOM:
+                    case ViewOrientation.SHADOW_LEFT_BOTTOM:
                         shadowPaint.setShadowLayer(shadow, -shadow, shadow, shadowColor);
                         break;
-                    case ViewOrientation.RIGHT_TOP:
+                    case ViewOrientation.SHADOW_RIGHT_TOP:
                         shadowPaint.setShadowLayer(shadow, shadow, -shadow, shadowColor);
                         break;
-                    case ViewOrientation.RIGHT_BOTTOM:
+                    case ViewOrientation.SHADOW_RIGHT_BOTTOM:
                         shadowPaint.setShadowLayer(shadow, shadow, shadow, shadowColor);
                         break;
                 }
@@ -81,7 +81,9 @@ public class ViewShadow {
 
     public void setShadowColor(int color){
         shadowPaint.reset();
+        shadowPaint.setStyle(Paint.Style.FILL);
         shadowPaint.setColor(color);
+        this.shadowColor = color;
     }
 
     public void setShadowOrientation(int shadowOrientation){

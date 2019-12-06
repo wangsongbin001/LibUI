@@ -50,6 +50,10 @@ public class WRelativeLayout extends RelativeLayout {
         super.onDraw(canvas);
     }
 
+    public ViewHelper getViewHelper(){
+        return viewHelper;
+    }
+
     @Override
     protected void dispatchSetPressed(boolean pressed) {
         Log.i("ui_tag", "dispatchSetPressed: pressed" + pressed);

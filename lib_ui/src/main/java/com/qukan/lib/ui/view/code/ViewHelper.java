@@ -88,6 +88,22 @@ public class ViewHelper {
         return this;
     }
 
+    public ViewHelper setRadius(int dpRadiusLT, int dpRadiusRT, int dpRadiusRB, int dpRadiusLB) {
+        dpRadiusLT = dpRadiusLT < 0 ? 0 : dpRadiusLT;
+        dpRadiusLB = dpRadiusLB < 0 ? 0 : dpRadiusLB;
+        dpRadiusRT = dpRadiusRT < 0 ? 0 : dpRadiusRT;
+        dpRadiusRB = dpRadiusRB < 0 ? 0 : dpRadiusRB;
+        if (viewRadius != null) {
+            viewRadius.setRadius(
+                    UIUtil.dip2px(view.getContext(), dpRadiusLT),
+                    UIUtil.dip2px(view.getContext(), dpRadiusRT),
+                    UIUtil.dip2px(view.getContext(), dpRadiusRB),
+                    UIUtil.dip2px(view.getContext(), dpRadiusLB)
+            );
+        }
+        return this;
+    }
+
     //设置边框
     public ViewHelper setBorder(int dpBorderWidth, int borderColor) {
         dpBorderWidth = dpBorderWidth < 0 ? 0 : dpBorderWidth;

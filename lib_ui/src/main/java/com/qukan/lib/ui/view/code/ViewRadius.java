@@ -34,7 +34,7 @@ public class ViewRadius {
         cornerArray[7] = radius;
     }
 
-    public void setRadius(float leftTop, float leftBottom, float rightTop, float rightBottom) {
+    public void setRadius(float leftTop, float rightTop, float rightBottom, float leftBottom) {
         cornerArray[0] = leftTop;
         cornerArray[1] = leftTop;
         cornerArray[2] = rightTop;

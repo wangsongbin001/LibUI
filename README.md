@@ -17,35 +17,44 @@
 
 #### xml使用如下
 ```xml
-    <com.qukan.lib.ui.view.WTextView
-        android:layout_width="200dp"
-        android:layout_height="46dp"
-        android:text="hello world"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:onClick="onClick"
-        app:w_radius="6dp"
-        app:w_bg_start="#4CAF50"
-        app:w_bg_end="#2167F3"
-        app:w_bg_orientation="left_to_right"
-        app:w_press_bg="#ffffff"
-        app:w_border_color="#E91E63"
-        app:w_border_width="2dp"
-        app:w_shadow_color="#5F5E5E"
-        app:w_shadow_width="4dp"/>
+    <com.qukan.lib.ui.view.WFrameLayout
+        android:id="@+id/fl"
+        android:layout_width="220dp"
+        android:layout_height="220dp">
+
+        <com.qukan.lib.ui.view.WTextView
+            android:id="@+id/tv"
+            android:layout_width="160dp"
+            android:layout_height="46dp"
+            android:text="hello world"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:onClick="onClick"
+            app:w_radius="6dp"
+            app:w_bg_start="#4CAF50"
+            app:w_bg_end="#2167F3"
+            app:w_bg_orientation="lb_to_rt"
+            app:w_press_bg="#fff"
+            app:w_border_color="@color/colorPrimary"
+            app:w_border_width="2dp"
+            app:w_shadow_color="#5F5E5E"
+            app:w_shadow_width="4dp"
+            app:w_shadow_orientation="all"/>
+
+    </com.qukan.lib.ui.view.WFrameLayout>
+
 ```
 
 
 #### 代码动态设置如下
 
 ```java
-        WTextView tv = findViewById(R.id.tv);
-        tv.getViewHelper()
-                .setRadius(10)
-                .setBorder(3, Color.RED)
-                .setShadow(4, Color.YELLOW, ViewOrientation.ALL)
-                .setBgColor(Color.BLUE, Color.GREEN, ViewOrientation.LEFT_TO_RIGHT)
-                .setPressBgColor(Color.GREEN, Color.BLUE, ViewOrientation.LEFT_TO_RIGHT)
+        WFrameLayout fl = findViewById(R.id.fl);
+        fl.getViewHelper()
+                .setRadius(60, 60, 0, 60)
+                .setBgColor(Color.parseColor("#ffffff"))
+                .setBorder(6, Color.parseColor("#E91E63"))
+                .setShadow(10, Color.parseColor("#FFEB3B"), ViewOrientation.SHADOW_RIGHT_BOTTOM)
                 .invalidate();
 ```
 

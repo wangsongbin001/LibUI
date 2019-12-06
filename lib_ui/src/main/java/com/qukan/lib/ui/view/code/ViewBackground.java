@@ -8,8 +8,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
-import android.util.Log;
-import android.view.MotionEvent;
 
 import com.qukan.lib.ui.R;
 import com.qukan.lib.ui.view.ViewOrientation;
@@ -59,9 +57,9 @@ public class ViewBackground {
             }
 
             if (pressBgColor != Color.TRANSPARENT) {
-                setPressBackgroudColor(bgColor);
+                setPressBackgroudColor(pressBgColor);
             } else if (pressBgColorStart != Color.TRANSPARENT || pressBgColorEnd != Color.TRANSPARENT) {
-                setPressBackgroudColor(bgColorStart, bgColorEnd);
+                setPressBackgroudColor(pressBgColorStart, pressBgColorEnd);
             }
         }
     }
@@ -106,11 +104,13 @@ public class ViewBackground {
         if (canvas != null && rectF != null && path != null && cornerArray != null) {
             if (!bgColors.isEmpty()) {
                 measurePath(rectF, path, borderWidth, cornerArray);
-
+                bgPaint.reset();
+                bgPaint.setAntiAlias(true);
                 if (isPressed) {
                     if (pressedColors.isEmpty()) {
                         bgPaint.setAlpha((int) (255 * pressAlpha));
                     } else {
+                        bgPaint.setAlpha(255);
                         if (pressedColors.size() > 1) {
                             bgPaint.setShader(getShader(mRectF, pressedColors, pressGradientOrientation));
                         } else {
@@ -119,8 +119,6 @@ public class ViewBackground {
                         }
                     }
                 } else {
-                    bgPaint.reset();
-                    bgPaint.setAntiAlias(true);
                     bgPaint.setAlpha(255);
                     if (bgColors.size() > 1) {
                         bgPaint.setShader(getShader(mRectF, bgColors, gradientOrientation));
@@ -160,21 +158,21 @@ public class ViewBackground {
             }
             Shader shader = null;
             switch (gradientOrientation) {
-                case ViewOrientation.TOP_TO_BOTTOM:
+                case ViewOrientation.GRADIENT_TOP_TO_BOTTOM:
                     shader = new LinearGradient(rectF.width(), 0,
                             rectF.width(), rectF.height(),
                             colorArray,
                             null,
                             Shader.TileMode.CLAMP);
                     break;
-                case ViewOrientation.LEFT_TOP_TO_RIGHT_BOTTOM:
+                case ViewOrientation.GRADIENT_LEFT_TOP_TO_RIGHT_BOTTOM:
                     shader = new LinearGradient(0, 0,
                             rectF.width(), rectF.height(),
                             colorArray,
                             null,
                             Shader.TileMode.CLAMP);
                     break;
-                case ViewOrientation.LEFT_BOTTOM_TO_TOP_RIGHT:
+                case ViewOrientation.GRADIENT_LEFT_BOTTOM_TO_TOP_RIGHT:
                     shader = new LinearGradient(0, rectF.height(),
                             rectF.width(), 0,
                             colorArray,
@@ -198,6 +196,9 @@ public class ViewBackground {
      * @return  是否需要刷新界面
      */
     public boolean dispatchSetPressed(boolean isPressed) {
+        if(this.isPressed == isPressed){
+            return false;
+        }
         this.isPressed = isPressed;
         return true;
     }
