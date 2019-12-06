@@ -59,7 +59,7 @@ public class WTextView extends AppCompatTextView {
 
     @Override
     protected void dispatchSetPressed(boolean pressed) {
-        Log.i("ui_tag", "dispatchSetPressed: pressed" + pressed);
+        Log.i("ui_tag", "WTextView dispatchSetPressed: pressed" + pressed);
         super.dispatchSetPressed(pressed);
         if (viewHelper != null) {
             viewHelper.dispatchSetPressed(pressed);

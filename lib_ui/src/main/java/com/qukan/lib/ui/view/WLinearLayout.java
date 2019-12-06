@@ -31,6 +31,8 @@ public class WLinearLayout extends LinearLayout {
     private void init(Context context, AttributeSet attrs) {
         viewHelper = new ViewHelper(this);
         viewHelper.init(context, attrs);
+        //处于性能的考虑，viewgroup会被设置成true，即不会调用onDraw方法
+        setWillNotDraw(false);
     }
 
     @Override

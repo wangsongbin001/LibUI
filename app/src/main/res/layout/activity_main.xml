@@ -6,18 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:gravity="center_horizontal"
-    android:paddingTop="20dp">
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+
+    <com.qukan.lib.ui.view.WFrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:onClick="onClick"
+        app:w_radius="20dp"
+        app:w_bg="#fff"
+        app:w_press_bg="#aaa"
+        app:w_border_color="@color/colorPrimary"
+        app:w_border_width="2dp"
+        app:w_shadow_color="#FFEB3B"
+        app:w_shadow_width="6dp"
+        app:w_shadow_orientation="rb">
+
+
+    </com.qukan.lib.ui.view.WFrameLayout>
+
+
 
     <com.qukan.lib.ui.view.WTextView
         android:layout_width="200dp"
         android:layout_height="46dp"
         android:text="hello world"
         android:gravity="center"
+        android:layout_gravity="center"
+        android:onClick="onClick"
         app:w_radius="6dp"
-        app:w_bg="@color/colorAccent"
         app:w_bg_start="#4CAF50"
         app:w_bg_end="#2167F3"
-        app:w_border_color="@color/colorPrimary"
+        app:w_bg_orientation="left_to_right"
+        app:w_press_bg="#ffffff"
+        app:w_border_color="#E91E63"
         app:w_border_width="2dp"
         app:w_shadow_color="#5F5E5E"
         app:w_shadow_width="4dp"/>

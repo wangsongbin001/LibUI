@@ -30,6 +30,8 @@ public class WFrameLayout extends FrameLayout {
     private void init(Context context, AttributeSet attrs) {
         viewHelper = new ViewHelper(this);
         viewHelper.init(context, attrs);
+        //处于性能的考虑，viewgroup会被设置成true，即不会调用onDraw方法
+        setWillNotDraw(false);
     }
 
     @Override
@@ -49,7 +51,7 @@ public class WFrameLayout extends FrameLayout {
 
     @Override
     protected void dispatchSetPressed(boolean pressed) {
-        Log.i("ui_tag", "dispatchSetPressed: pressed" + pressed);
+        Log.i("ui_tag", "WFrameLayout dispatchSetPressed: pressed" + pressed);
         super.dispatchSetPressed(pressed);
         if (viewHelper != null) {
             viewHelper.dispatchSetPressed(pressed);
