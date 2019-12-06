@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角半径 -->
+    <attr name="w_radius" format="dimension" />
+    <attr name="w_radius_lt" format="dimension" />
+    <attr name="w_radius_lb" format="dimension" />
+    <attr name="w_radius_rt" format="dimension" />
+    <attr name="w_radius_rb" format="dimension" />
+    <!-- 背景色 -->
+    <attr name="w_bg" format="color" />
+    <!-- 背景渐变色 -->
+    <attr name="w_bg_start" format="color" />
+    <attr name="w_bg_end" format="color" />
+    <attr name="w_bg_orientation" format="enum">
+        <enum name="left_to_right" value="0" />
+        <enum name="top_to_bottom" value="1" />
+        <enum name="lt_to_rb" value="2" />
+        <enum name="lb_to_rt" value="3" />
+    </attr>
+    <!-- 按压状态颜色 -->
+    <attr name="w_press_bg" format="color" />
+    <attr name="w_press_bg_start" format="color" />
+    <attr name="w_press_bg_end" format="color" />
+    <attr name="w_press_bg_orientation" format="enum">
+        <enum name="left_to_right" value="0" />
+        <enum name="top_to_bottom" value="1" />
+        <enum name="lt_to_rb" value="2" />
+        <enum name="lb_to_rt" value="3" />
+    </attr>
+    <!-- 边框 -->
+    <attr name="w_border_width" format="dimension" />
+    <attr name="w_border_color" format="color" />
+    <!-- 阴影 -->
+    <attr name="w_shadow_width" format="dimension" />
+    <attr name="w_shadow_color" format="color" />
+    <attr name="w_shadow_orientation" format="enum">
+        <enum name="all" value="0" />
+        <enum name="left" value="1" />
+        <enum name="top" value="2" />
+        <enum name="right" value="3" />
+        <enum name="bottom" value="4" />
+        <enum name="lt" value="5" />
+        <enum name="lb" value="6" />
+        <enum name="rt" value="7" />
+        <enum name="rb" value="8" />
+    </attr>
+
+    <declare-styleable name="WView">
+        <attr name="w_radius" />
+        <attr name="w_radius_lt" />
+        <attr name="w_radius_lb" />
+        <attr name="w_radius_rt" />
+        <attr name="w_radius_rb" />
+        <attr name="w_bg" />
+        <attr name="w_bg_start" />
+        <attr name="w_bg_end" />
+        <attr name="w_bg_orientation" />
+        <attr name="w_press_bg" />
+        <attr name="w_press_bg_start" />
+        <attr name="w_press_bg_end" />
+        <attr name="w_press_bg_orientation" />
+        <attr name="w_border_width" />
+        <attr name="w_border_color" />
+        <attr name="w_shadow_width" />
+        <attr name="w_shadow_color" />
+        <attr name="w_shadow_orientation" />
+    </declare-styleable>
+</resources>
