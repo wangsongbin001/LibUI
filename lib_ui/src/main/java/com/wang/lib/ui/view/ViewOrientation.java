@@ -1,4 +1,4 @@
-package com.qukan.lib.ui.view;
+package com.wang.lib.ui.view;
 
 import android.support.annotation.IntDef;
 

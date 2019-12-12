@@ -1,4 +1,4 @@
-package com.qukan.lib.ui.utils;
+package com.wang.lib.ui.utils;
 
 import android.content.Context;
 

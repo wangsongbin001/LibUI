@@ -1,4 +1,4 @@
-package com.qukan.lib.ui.view.code;
+package com.wang.lib.ui.view.code;
 
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -7,7 +7,8 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-import com.qukan.lib.ui.R;
+import com.wang.lib.ui.R;
+
 
 /**
  * 边框绘制

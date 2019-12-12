@@ -1,4 +1,4 @@
-package com.qukan.lib.ui.view.code;
+package com.wang.lib.ui.view.code;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,12 +7,12 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 
-import com.qukan.lib.ui.R;
-import com.qukan.lib.ui.utils.UIUtil;
-import com.qukan.lib.ui.view.ViewOrientation;
+import com.wang.lib.ui.R;
+import com.wang.lib.ui.utils.UIUtil;
+import com.wang.lib.ui.view.ViewOrientation;
+
 
 public class ViewHelper {
     View view;

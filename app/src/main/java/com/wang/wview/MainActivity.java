@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.qukan.lib.ui.view.ViewOrientation;
-import com.qukan.lib.ui.view.WFrameLayout;
+import com.wang.lib.ui.view.ViewOrientation;
+import com.wang.lib.ui.view.WFrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 

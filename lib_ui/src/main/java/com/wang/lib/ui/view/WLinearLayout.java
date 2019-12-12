@@ -1,34 +1,29 @@
-package com.qukan.lib.ui.view;
+package com.wang.lib.ui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 
-import com.qukan.lib.ui.view.code.ViewHelper;
+import com.wang.lib.ui.view.code.ViewHelper;
 
-/**
- * 1，添加属性
- * 2，获取属性
- * 3，使用属性
- */
-public class WTextView extends AppCompatTextView {
+public class WLinearLayout extends LinearLayout {
 
     ViewHelper viewHelper;
 
-    public WTextView(Context context) {
+    public WLinearLayout(Context context) {
         super(context);
         init(context, null);
     }
 
-    public WTextView(Context context, AttributeSet attrs) {
+    public WLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public WTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public WLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -36,6 +31,8 @@ public class WTextView extends AppCompatTextView {
     private void init(Context context, AttributeSet attrs) {
         viewHelper = new ViewHelper(this);
         viewHelper.init(context, attrs);
+        //处于性能的考虑，viewgroup会被设置成true，即不会调用onDraw方法
+        setWillNotDraw(false);
     }
 
     @Override
@@ -59,7 +56,7 @@ public class WTextView extends AppCompatTextView {
 
     @Override
     protected void dispatchSetPressed(boolean pressed) {
-        Log.i("ui_tag", "WTextView dispatchSetPressed: pressed" + pressed);
+        Log.i("ui_tag", "dispatchSetPressed: pressed" + pressed);
         super.dispatchSetPressed(pressed);
         if (viewHelper != null) {
             viewHelper.dispatchSetPressed(pressed);

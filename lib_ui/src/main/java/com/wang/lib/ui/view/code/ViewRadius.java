@@ -1,8 +1,9 @@
-package com.qukan.lib.ui.view.code;
+package com.wang.lib.ui.view.code;
 
 import android.content.res.TypedArray;
 
-import com.qukan.lib.ui.R;
+import com.wang.lib.ui.R;
+
 
 public class ViewRadius {
     private float[] cornerArray = new float[]{0, 0, 0, 0, 0, 0, 0, 0};

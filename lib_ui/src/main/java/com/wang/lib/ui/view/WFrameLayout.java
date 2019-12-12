@@ -1,29 +1,29 @@
-package com.qukan.lib.ui.view;
+package com.wang.lib.ui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.FrameLayout;
 
-import com.qukan.lib.ui.view.code.ViewHelper;
+import com.wang.lib.ui.view.code.ViewHelper;
 
-public class WRelativeLayout extends RelativeLayout {
 
+public class WFrameLayout extends FrameLayout {
     ViewHelper viewHelper;
 
-    public WRelativeLayout(Context context) {
+    public WFrameLayout(Context context) {
         super(context);
         init(context, null);
     }
 
-    public WRelativeLayout(Context context, AttributeSet attrs) {
+    public WFrameLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public WRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public WFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -56,7 +56,7 @@ public class WRelativeLayout extends RelativeLayout {
 
     @Override
     protected void dispatchSetPressed(boolean pressed) {
-        Log.i("ui_tag", "dispatchSetPressed: pressed" + pressed);
+        Log.i("ui_tag", "WFrameLayout dispatchSetPressed: pressed" + pressed);
         super.dispatchSetPressed(pressed);
         if (viewHelper != null) {
             viewHelper.dispatchSetPressed(pressed);

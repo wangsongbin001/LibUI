@@ -1,4 +1,4 @@
-package com.qukan.lib.ui.view.code;
+package com.wang.lib.ui.view.code;
 
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 
-import com.qukan.lib.ui.R;
-import com.qukan.lib.ui.view.ViewOrientation;
+import com.wang.lib.ui.R;
+import com.wang.lib.ui.view.ViewOrientation;
 
 import java.util.ArrayList;
 import java.util.List;

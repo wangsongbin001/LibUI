@@ -7,12 +7,12 @@
     android:gravity="center_horizontal"
     android:padding="20dp">
 
-    <com.qukan.lib.ui.view.WFrameLayout
+    <com.wang.lib.ui.view.WFrameLayout
         android:id="@+id/fl"
         android:layout_width="220dp"
         android:layout_height="220dp">
 
-        <com.qukan.lib.ui.view.WTextView
+        <com.wang.lib.ui.view.WTextView
             android:id="@+id/tv"
             android:layout_width="160dp"
             android:layout_height="46dp"
@@ -31,6 +31,6 @@
             app:w_shadow_width="4dp"
             app:w_shadow_orientation="all"/>
 
-    </com.qukan.lib.ui.view.WFrameLayout>
+    </com.wang.lib.ui.view.WFrameLayout>
 
 </LinearLayout>
