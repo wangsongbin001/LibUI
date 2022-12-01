@@ -1,13 +1,14 @@
-package com.wang.lib.ui.view;
+package com.songbin.libui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.wang.lib.ui.view.code.ViewHelper;
+import com.songbin.libui.view.code.ViewHelper;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 /**
  * 1，添加属性

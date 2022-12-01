@@ -1,4 +1,4 @@
-package com.wang.lib.ui.view.code;
+package com.songbin.libui.view.code;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,9 +9,9 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.wang.lib.ui.R;
-import com.wang.lib.ui.utils.UIUtil;
-import com.wang.lib.ui.view.ViewOrientation;
+import com.songbin.libui.R;
+import com.songbin.libui.utils.UIUtil;
+import com.songbin.libui.view.ViewOrientation;
 
 
 public class ViewHelper {

@@ -1,6 +1,5 @@
-package com.wang.lib.ui.view;
-
-import android.support.annotation.IntDef;
+package com.songbin.libui.view;
+import androidx.annotation.IntDef;
 
 public class ViewOrientation {
     //背景渐变色方向

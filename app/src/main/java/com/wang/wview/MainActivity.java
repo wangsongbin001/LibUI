@@ -1,12 +1,13 @@
 package com.wang.wview;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.wang.lib.ui.view.ViewOrientation;
-import com.wang.lib.ui.view.WFrameLayout;
+import com.songbin.libui.view.ViewOrientation;
+import com.songbin.libui.view.WFrameLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

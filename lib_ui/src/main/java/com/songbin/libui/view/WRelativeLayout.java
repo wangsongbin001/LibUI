@@ -1,29 +1,29 @@
-package com.wang.lib.ui.view;
+package com.songbin.libui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
-import com.wang.lib.ui.view.code.ViewHelper;
+import com.songbin.libui.view.code.ViewHelper;
 
-public class WLinearLayout extends LinearLayout {
+public class WRelativeLayout extends RelativeLayout {
 
     ViewHelper viewHelper;
 
-    public WLinearLayout(Context context) {
+    public WRelativeLayout(Context context) {
         super(context);
         init(context, null);
     }
 
-    public WLinearLayout(Context context, AttributeSet attrs) {
+    public WRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public WLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public WRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }

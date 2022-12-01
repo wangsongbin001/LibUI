@@ -1,4 +1,4 @@
-package com.wang.lib.ui.view;
+package com.songbin.libui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.wang.lib.ui.view.code.ViewHelper;
+import com.songbin.libui.view.code.ViewHelper;
 
 
 public class WFrameLayout extends FrameLayout {

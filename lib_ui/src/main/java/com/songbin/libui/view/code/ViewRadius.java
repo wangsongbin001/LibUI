@@ -1,12 +1,12 @@
-package com.wang.lib.ui.view.code;
+package com.songbin.libui.view.code;
 
 import android.content.res.TypedArray;
 
-import com.wang.lib.ui.R;
+import com.songbin.libui.R;
 
 
 public class ViewRadius {
-    private float[] cornerArray = new float[]{0, 0, 0, 0, 0, 0, 0, 0};
+    private final float[] cornerArray = new float[]{0, 0, 0, 0, 0, 0, 0, 0};
 
     public ViewRadius(TypedArray typedArray) {
         if (typedArray != null) {

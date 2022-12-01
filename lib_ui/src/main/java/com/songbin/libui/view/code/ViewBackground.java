@@ -1,4 +1,4 @@
-package com.wang.lib.ui.view.code;
+package com.songbin.libui.view.code;
 
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 
-import com.wang.lib.ui.R;
-import com.wang.lib.ui.view.ViewOrientation;
+import com.songbin.libui.R;
+import com.songbin.libui.view.ViewOrientation;
 
 import java.util.ArrayList;
 import java.util.List;

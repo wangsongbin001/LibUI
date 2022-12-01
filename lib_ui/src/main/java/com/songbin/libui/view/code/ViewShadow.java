@@ -1,4 +1,4 @@
-package com.wang.lib.ui.view.code;
+package com.songbin.libui.view.code;
 
 import android.content.res.TypedArray;
 import android.graphics.BlurMaskFilter;
@@ -9,8 +9,8 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.view.View;
 
-import com.wang.lib.ui.R;
-import com.wang.lib.ui.view.ViewOrientation;
+import com.songbin.libui.R;
+import com.songbin.libui.view.ViewOrientation;
 
 import static android.view.View.LAYER_TYPE_SOFTWARE;
 

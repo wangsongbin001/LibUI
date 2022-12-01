@@ -1,0 +1,12 @@
+ext {
+    android = [
+            //buildToolsVersion: '29.0.2',
+            compileSdkVersion: 31,
+            minSdkVersion    : 21,
+            targetSdkVersion : 31,
+    ]
+
+    dependency = [
+
+    ]
+}

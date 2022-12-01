@@ -1,4 +1,4 @@
-package com.wang.lib.ui.utils;
+package com.songbin.libui.utils;
 
 import android.content.Context;
 

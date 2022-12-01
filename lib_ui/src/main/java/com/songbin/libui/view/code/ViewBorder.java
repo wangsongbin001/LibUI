@@ -1,4 +1,4 @@
-package com.wang.lib.ui.view.code;
+package com.songbin.libui.view.code;
 
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-import com.wang.lib.ui.R;
+import com.songbin.libui.R;
 
 
 /**
